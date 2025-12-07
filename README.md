@@ -15,13 +15,14 @@
             padding: 0;
         }
 
-        /* --- 1. Giriş Forması Stilləri --- */
+        /* --- 1. Giriş Forması Stilləri (Sizin Birinci Şəkliniz) --- */
         #input-page {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
+            background-color: white; /* Ağ fon */
         }
 
         #input-page h1 {
@@ -55,7 +56,7 @@
             background-color: #005bb5;
         }
 
-        /* --- 2. Nəticə Vərəqəsi (Result Page) Stilləri --- */
+        /* --- 2. Nəticə Vərəqəsi (Result Page) Stilləri (Şəklinizə Uyğun Boz/Ağ) --- */
         #result-page {
             display: none; /* Başlanğıcda gizli saxlayırıq */
             padding: 20px 0;
@@ -314,15 +315,14 @@
             const inputPage = document.getElementById('input-page');
             const resultPage = document.getElementById('result-page');
 
-            // JavaScript yalnız "54979" nömrəsini qəbul edir
+            // 54979 nömrəsini daxil etdikdə nəticə görünür
             if (inputNumber === '54979') {
-                // Giriş səhifəsini gizlədir, nəticəni göstərir
                 inputPage.style.display = 'none';
                 resultPage.style.display = 'block';
                 window.scrollTo(0, 0); 
 
             } else {
-                // Başqa nömrə daxil edilərsə yeni xəta mesajı
+                // Başqa nömrə daxil edildikdə "Nəticə tapılmadı" yazısı gəlir
                 alert('Nəticə tapılmadı.');
             }
         }

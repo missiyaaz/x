@@ -10,19 +10,19 @@
         /* --- Ümumi və Səhifə Stilləri --- */
         body {
             font-family: Tahoma, sans-serif;
-            background-color: #f7f7f7; /* Ümumi arxa fon */
+            background-color: #f7f7f7; 
             margin: 0;
             padding: 0;
         }
 
-        /* --- 1. Giriş Forması Stilləri (Sizin Birinci Şəkliniz) --- */
+        /* --- 1. Giriş Forması Stilləri --- */
         #input-page {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
-            background-color: white; /* Ağ fon */
+            background-color: white; 
         }
 
         #input-page h1 {
@@ -40,8 +40,9 @@
             margin-right: 10px;
         }
 
+        /* --- MAVİ DÜYMƏ STİLLƏRİ --- */
         .blue-button {
-            background-color: #007aff;
+            background-color: #007aff; /* Əsas Mavi Rəng */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -53,24 +54,24 @@
         }
 
         .blue-button:hover {
-            background-color: #005bb5;
+            background-color: #005bb5; 
         }
 
-        /* --- 2. Nəticə Vərəqəsi (Result Page) Stilləri (Şəklinizə Uyğun Boz/Ağ) --- */
+        /* --- 2. Nəticə Vərəqəsi (Result Page) Stilləri (Mavi Tonlar) --- */
         #result-page {
-            display: none; /* Başlanğıcda gizli saxlayırıq */
+            display: none; 
             padding: 20px 0;
         }
 
         .page-container {
-            width: 800px; /* Nəticə vərəqəsinin eni */
+            width: 800px; 
             margin: 0 auto;
             background-color: white;
             padding: 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border: 1px solid #ccc;
+            border: 1px solid #007aff; /* Çərçivəyə mavi kənar */
         }
-        /* Başlıq və Loqo */
+        
         .header-section {
             display: flex;
             justify-content: space-between;
@@ -80,7 +81,7 @@
         .result-title-box {
             font-size: 16px;
             font-weight: bold;
-            color: #333;
+            color: #007aff; /* Başlıq Mavi */
             padding-top: 5px; 
         }
         .logo-box {
@@ -88,6 +89,7 @@
             font-weight: bold;
             line-height: 1.1;
             font-size: 12px;
+            color: #004d99; /* Loqo mətni tünd mavi */
         }
         .logo-box img {
             max-width: 80px;
@@ -99,7 +101,8 @@
             margin: 0;
             font-size: 11px;
         }
-        /* Şagird Məlumat Cədvəli */
+        
+        /* Şagird Məlumat Cədvəli - Mavi Fonlar */
         .info-table {
             width: 100%;
             border-collapse: collapse;
@@ -107,27 +110,30 @@
             font-size: 12px;
         }
         .info-table td {
-            border: 1px solid #000;
+            border: 1px solid #004d99; /* Tünd Mavi Kənar */
             padding: 3px 6px;
         }
         .info-table .label {
-            background-color: #e6e6e6; 
+            background-color: #e0f7ff; /* Çox Açıq Mavi Fon */
             font-weight: bold;
             width: 15%; 
         }
-        /* Fənn Bölmələri */
+        
+        /* Fənn Başlıqları - Mavi Fonlar */
         .subject-box {
             margin-bottom: 15px;
         }
         .subject-name-row {
-            background-color: #e6e6e6;
+            background-color: #b3e5fc; /* Açıq Mavi Fon */
             padding: 3px 6px;
             font-weight: bold;
             font-size: 13px;
-            border: 1px solid #000;
+            border: 1px solid #004d99; 
             margin-bottom: -1px; 
+            color: #004d99;
         }
-        /* Ümumi Göstəricilər Cədvəli */
+        
+        /* Ümumi Göstəricilər Cədvəli - Mavi Fonlar */
         .summary-table {
             width: 100%;
             border-collapse: collapse;
@@ -135,16 +141,17 @@
             margin-bottom: 1px;
         }
         .summary-table td {
-            border: 1px solid #000;
+            border: 1px solid #004d99;
             padding: 4px;
             font-weight: bold;
             text-align: center;
         }
         .summary-table .highlight-label {
-            background-color: #f0f0f0;
+            background-color: #e0f7ff; /* Çox Açıq Mavi Fon */
             width: 8%; 
         }
-        /* Bal Cədvəli (Sual/Cavab) */
+        
+        /* Bal Cədvəli (Sual/Cavab) - Mavi Fonlar */
         .score-table {
             width: 100%;
             border-collapse: collapse;
@@ -153,12 +160,12 @@
             table-layout: fixed; 
         }
         .score-table td {
-            border: 1px solid #000;
+            border: 1px solid #004d99;
             padding: 2px 0;
             white-space: nowrap;
         }
         .score-table .q-label {
-             background-color: #e6e6e6;
+             background-color: #e0f7ff; /* Çox Açıq Mavi Fon */
              font-weight: bold;
         }
         .q-small { width: 2.2%; }
@@ -305,8 +312,7 @@
                     </tr>
                 </table>
             </div>
-
-        </div>
+            </div>
     </div>
 
     <script>
@@ -315,14 +321,12 @@
             const inputPage = document.getElementById('input-page');
             const resultPage = document.getElementById('result-page');
 
-            // 54979 nömrəsini daxil etdikdə nəticə görünür
             if (inputNumber === '54979') {
                 inputPage.style.display = 'none';
                 resultPage.style.display = 'block';
                 window.scrollTo(0, 0); 
 
             } else {
-                // Başqa nömrə daxil edildikdə "Nəticə tapılmadı" yazısı gəlir
                 alert('Nəticə tapılmadı.');
             }
         }

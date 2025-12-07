@@ -1,5 +1,4 @@
 # Вывод изображений и текстовое поле
-<!doctype html>
 <html lang="az">
 <head>
   <meta charset="utf-8" />

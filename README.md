@@ -1,5 +1,5 @@
 # missiya.neticeler
-<!DOCTYPE html>
+<html>
 <html lang="az">
 <head>
     <meta charset="UTF-8">
